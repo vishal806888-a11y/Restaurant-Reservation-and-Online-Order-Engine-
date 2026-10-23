@@ -1,0 +1,121 @@
+.party-details-page {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    padding: 55px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.75)),
+        url("/images/weekend-party-bg.jpg") center center / cover no-repeat;
+
+    color: #fff0d7;
+}
+
+.party-details-card {
+    position: relative;
+    z-index: 1;
+    width: min(100%, 900px);
+    padding: 38px;
+    border: 1px solid rgba(232, 187, 83, 0.65);
+    border-radius: 18px;
+    background: rgba(18, 9, 7, 0.82);
+    box-shadow: 0 20px 65px rgba(0, 0, 0, 0.5);
+}
+
+.party-details-eyebrow {
+    color: #e8bb53;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 4px;
+}
+
+.party-details-card > h1 {
+    color: #f4c85f;
+    text-align: center;
+    font-family: Georgia, serif;
+    font-size: clamp(30px, 5vw, 46px);
+}
+
+.party-details-intro {
+    max-width: 650px;
+    margin: 0 auto 28px;
+    text-align: center;
+    line-height: 1.8;
+    color: #e7d8c4;
+}
+
+.party-performer-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.party-performer {
+    padding: 22px;
+    border: 1px solid rgba(232, 187, 83, 0.4);
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.party-performer h2 {
+    color: #f4c85f;
+}
+
+.party-performer p,
+.party-performer small,
+.party-event-info p {
+    color: #e7d8c4;
+    line-height: 1.7;
+}
+
+.party-event-info {
+    margin-top: 24px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(232, 187, 83, 0.35);
+}
+
+.party-event-info strong {
+    color: #f4c85f;
+}
+
+.party-register-button,
+.party-back-button {
+    display: block;
+    width: 100%;
+    max-width: 360px;
+    margin: 20px auto 0;
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.party-register-button {
+    border: none;
+    background: linear-gradient(135deg, #ffe08a, #d69a20);
+    color: #171006;
+}
+
+.party-back-button {
+    border: 1px solid #d8a52c;
+    background: transparent;
+    color: #ffe08a;
+}
+
+@media (max-width: 650px) {
+    .party-details-page {
+        padding: 25px 12px;
+    }
+
+    .party-details-card {
+        padding: 24px 16px;
+    }
+
+    .party-performer-grid {
+        grid-template-columns: 1fr;
+    }
+}

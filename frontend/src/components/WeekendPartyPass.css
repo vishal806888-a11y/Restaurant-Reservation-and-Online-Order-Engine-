@@ -1,0 +1,65 @@
+
+.weekend-party-section {
+    width: 100%;
+    padding: 24px 20px 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #090909;
+    overflow: hidden;
+}
+
+.weekend-party-ticket {
+    display: block;
+    width: min(100%, 760px);
+    padding: 0;
+    margin: 0 auto;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    animation: party-ticket-float 4s ease-in-out infinite;
+    filter: drop-shadow(0 12px 22px rgba(222, 151, 31, 0.2));
+    transition: filter 0.3s ease;
+}
+
+.weekend-party-ticket:hover {
+    filter: drop-shadow(0 16px 30px rgba(255, 185, 51, 0.4));
+}
+
+.weekend-party-ticket:focus-visible {
+    outline: 3px solid #ffdc7b;
+    outline-offset: 5px;
+}
+
+.weekend-party-ticket-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+@keyframes party-ticket-float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-7px);
+    }
+}
+
+@media (max-width: 650px) {
+    .weekend-party-section {
+        padding: 18px 12px 30px;
+    }
+
+    .weekend-party-ticket {
+        animation-duration: 5s;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .weekend-party-ticket {
+        animation: none;
+    }
+}
